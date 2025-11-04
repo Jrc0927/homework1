@@ -1,0 +1,79 @@
+/* styles.css — HW1: History of Programming Languages */
+:root{
+  --bg:#0f172a;
+  --panel:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --accent:#93c5fd;
+  --link:#60a5fa;
+  --code:#1f2937;
+  --card:#0b1220;
+  --border:#1f2937;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+
+header{background:linear-gradient(180deg,#0b1220,#0f172a);border-bottom:1px solid var(--border);padding:2rem 1rem}
+.container{max-width:1200px;margin:0 auto;padding:0 1rem}
+
+.site-title{font-size:2rem;margin:0 0 .25rem 0}
+.site-subtitle{color:var(--muted);margin:0}
+
+nav{background:var(--panel);border-bottom:1px solid var(--border)}
+nav .container{display:flex;gap:1rem;flex-wrap:wrap}
+nav a{padding:.9rem .8rem;display:inline-block;border-radius:.5rem}
+nav a[aria-current="page"], nav a:hover{background:#0b1220}
+
+main{padding:2rem 0}
+
+/* NEW CSS PROPERTY #1: grid layout */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap:1.2rem;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:1rem;
+  padding:1rem 1.2rem;
+  box-shadow:0 .5rem 1.25rem rgba(0,0,0,.35); /* NEW CSS PROPERTY #2: box-shadow */
+}
+
+.card h3{margin-top:.4rem}
+.small{font-size:.95rem;color:var(--muted)}
+
+figure{
+  margin:0;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:.75rem;
+  overflow:hidden;
+}
+figure img {
+  width: 300px;        /* or 250px, 200px etc. */
+  height: auto;        /* keeps correct proportions */
+  margin: 0 auto;      /* centers inside the card */
+  display: block;      /* prevents inline spacing issues */
+}
+figcaption{padding:.75rem 1rem;color:var(--muted);font-size:.95rem;background:#0b1220;border-top:1px solid var(--border)}
+
+details{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:.75rem;
+  padding:1rem;
+}
+details summary{cursor:pointer;font-weight:600;margin:-.5rem -1rem 1rem -1rem;padding:.75rem 1rem;background:#0b1220;border-bottom:1px solid var(--border)}
+
+code, pre{background:var(--code);border-radius:.4rem;border:1px solid var(--border)}
+code{padding:.15rem .35rem}
+pre{padding:1rem;overflow:auto}
+
+footer{border-top:1px solid var(--border);color:var(--muted);padding:2rem 0;margin-top:2rem}
+kbd{background:#111827;border:1px solid #1f2937;border-bottom-color:#111827;border-radius:.35rem;padding:.1rem .35rem}
